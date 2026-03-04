@@ -1,21 +1,23 @@
 {
   "name": "Rosca",
-  "tagline": "Studente di informatica. Curioso per natura.",
-  "heroLead": "Qui trovi prove, progetti e un po’ di autoironia. Perché la verità è meglio del marketing.",
-  "aboutSubtitle": "Una descrizione breve, vera, e senza fuffa.",
+  "tagline": "Rosca Anatolie Francesco. Pippa nel esprimere se stesso.",
+  "heroLead": "Qui trovi chi sono e cosa mi caratterizza. Perché la verità è meglio del nasconderi dietro una maschera.",
+  "aboutSubtitle": "Una descrizione breve, vera, e a modo mio.",
   "about": [
-    "Mi piace capire come funzionano le cose: reti, codice, idee.",
-    "Costruisco progetti per imparare, non solo per finire.",
-    "Sono serio quando serve… e scemo il giusto quando è il momento."
+    "Mi piace capire come funzionano le cose.",
+    "Costruisco progetti per imparare, non smetterò mai.",
+    "Sono serio quando serve… (più unico che raro) e scemo il 90% del tempo."
   ],
   "now": [
-    "Sto aggiornando il mio portfolio in versione “essenza”.",
-    "Sto raccogliendo progetti e prove verificabili (repo, snippet, demo)."
+    "Bagnino di salvataggio.",
+    "Pizzaiolo.",
+    "Sportivo.",
+    "Ammaliato dalla mia Musa"
   ],
   "links": {
-    "github": "https://github.com/roschitos",
+    "github": "https://github.com/tuoUser",
     "email": "mailto:roscafrancesco07@gmail.com",
     "insta": "https://www.instagram.com/el_rocitos?igsh=MXJtaWNsM21pOTkwNQ==",
-    "tiktok": "https://www.tiktok.com/@roschitos?_r=1&_t=ZN-94Q1nVvAXtC"
+    "tiktok": "https://www.tiktok.com/@roschitos?_r=1&_t=ZN-94Q2hJd3tdG"
   }
 }
