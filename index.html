@@ -1,1 +1,157 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rosca — Portfolio (non un CV, una prova vivente)</title>
+  <meta name="description" content="Portfolio personale: progetti, idee, prove, autoironia." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
+<body>
+  <a class="skip-link" href="#main">Salta al contenuto</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">R</div>
+        <div class="brand-text">
+          <div class="brand-title" id="name">Rosca</div>
+          <div class="brand-subtitle" id="tagline">Studente di informatica. Curioso per natura.</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#about">Chi sono</a>
+        <a href="#diagnostics">Diagnostica</a>
+        <a href="#contact">Contatti</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1 class="hero-title">
+            Questo non è un CV.
+            <span class="hero-accent">È un laboratorio pubblico.</span>
+          </h1>
+          <p class="hero-lead" id="heroLead">
+            Qui trovi prove, progetti e un po’ di autoironia. Perché la verità è meglio del marketing.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#projects">Vedi progetti</a>
+            <button class="btn ghost" id="btnTruth" type="button">Verità random</button>
+          </div>
+
+          <p class="thought" id="thought" aria-live="polite"></p>
+        </div>
+
+        <div class="hero-right">
+          <div class="card terminal">
+            <div class="terminal-top">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="terminal-title">roscaOS — boot log</span>
+            </div>
+            <pre class="terminal-body" id="bootLog">
+> booting Rosca.exe
+> curiosity module: loading...
+> sleep module: unstable
+> reality check: enabled
+<h4 id="typeText"></h4>
+            </pre>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>Chi sono</h2>
+          <p class="muted" id="aboutSubtitle">Una descrizione breve, vera, più o meno.</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>In poche righe</h3>
+            <div id="aboutText" class="prose">
+              <p>Carico contenuti da JSON…</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Adesso</h3>
+            <ul class="list" id="nowList">
+              <li>Sto caricando i dati…</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="diagnostics">
+      <div class="container">
+        <div class="section-head">
+          <h2>Diagnostica personale</h2>
+          <p class="muted">Abilità e… “disabilità” (per ridere, ma anche per essere onesti).</p>
+        </div>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Abilità</h3>
+            <ul class="chips" id="abilities"></ul>
+          </div>
+
+          <div class="card">
+            <h3>Disabilità</h3>
+            <ul class="chips danger" id="disabilities"></ul>
+          </div>
+        </div>
+
+        <div class="card subtle">
+          <div class="meter-row">
+            <div>
+              <div class="meter-title">Confidenza nel codice</div>
+              <div class="muted small">prima del deploy / dopo il deploy</div>
+            </div>
+            <div class="meter">
+              <div class="meter-bar" id="meterBar" style="width: 69%"></div>
+            </div>
+            <button class="btn tiny ghost" id="btnMeter" type="button">Simula deploy</button>
+            <button class="btn tiny ghost" onclick="randomConfidence()">Test confidence</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contatti</h2>
+          <p class="muted">Link veri, niente misteri.</p>
+        </div>
+
+        <div class="card">
+          <div class="contact" id="contactLinks">
+            <a href="#" class="link">GitHub</a>
+            <a href="#" class="link">Email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="muted small">© <span id="year"></span> Rosca — build: <span id="buildId"></span></span>
+      <a class="muted small link" href="#top" id="topLink">torna su</a>
+    </div>
+  </footer>
+
+  <script defer src="assets/js/app.js"></script>
+</body>
+</html>
