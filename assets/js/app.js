@@ -135,6 +135,8 @@ function buildId() {
     if (profile.links?.email) {
       const a = el("a", "link", "Email");
       a.href = profile.links.email;
+      a.target = "_blank";
+      a.rel = "noreferrer";
       contact.appendChild(a);
     }
     if (profile.links?.insta) {
@@ -218,11 +220,18 @@ document.addEventListener("keydown", e=>{
   buffer = buffer.slice(-5);
 
   if(buffer === "debug"){
-    alert("Developer mode unlocked");
-  } else if(buffer === "musa"){
-    alert("Agnese è la mia musa ispiratrice di questo progetto.");
-  } else if(buffer === "clear"{
+    showThought("Developer mode unlocked");
     buffer = "";
+  } else if(buffer === "rosca"){
+    showThought("Agnese è la mia musa ispiratrice di questo progetto.");
+    buffer = "";
+  } else if(buffer === "amore"){
+    showThought("Mi piace pensare che dietro ogni riga di codice ci sia un po' di amore... o almeno un po' di passione per la tecnologia. Forse è per questo che a volte mi ritrovo a parlare con il mio computer come se fosse una persona, chiedendogli se ha bisogno di una pausa o se vuole un caffè virtuale. In fondo, siamo tutti un po' innamorati del nostro lavoro, no?");
+    buffer = "";
+  } else if(buffer === "alice"){
+    showThought("Alice, top 5 carrier, top 5 pesci");
+    buffer = "";
+  }
 });
 
 const meter = document.getElementById("meterBar");
