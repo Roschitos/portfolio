@@ -221,7 +221,8 @@ document.addEventListener("keydown", e=>{
     alert("Developer mode unlocked");
   } else if(buffer === "musa"){
     alert("Agnese è la mia musa ispiratrice di questo progetto.");
-  }
+  } else if(buffer === "clear"{
+    buffer = "";
 });
 
 const meter = document.getElementById("meterBar");
