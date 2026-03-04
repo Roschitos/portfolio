@@ -137,6 +137,20 @@ function buildId() {
       a.href = profile.links.email;
       contact.appendChild(a);
     }
+    if (profile.links?.insta) {
+      const a = el("a", "link", "Instagram");
+      a.href = profile.links.insta;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      contact.appendChild(a);
+    }
+    if (profile.links?.tiktok) {
+      const a = el("a", "link", "TikTok");
+      a.href = profile.links.tiktok;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      contact.appendChild(a);
+    }
 
     // diagnostics
     renderChips($("#abilities"), diag.abilities ?? []);
