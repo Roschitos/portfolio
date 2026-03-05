@@ -287,9 +287,9 @@ function pickThoughtElegant() {
     sayThought();
 
     // Autoplay “gentile” (commenta se non lo vuoi)
-    setInterval(() => {
-      if (document.visibilityState === "visible") sayThought();
-    }, 12000);
+    // setInterval(() => {
+    //   if (document.visibilityState === "visible") sayThought();
+    // }, 12000);
 
     // meter meme
     const meterBar = $("#meterBar");
@@ -346,6 +346,9 @@ document.addEventListener("keydown", (e) => {
     buffer = "";
   } else if (buffer === "alice") {
     showThought("Alice, top 5 carrier, top 5 pesci");
+    buffer = "";
+  } else if(buffer === "ciola") {
+    showThouth("Viola il colore della ciola");
     buffer = "";
   }
 });
