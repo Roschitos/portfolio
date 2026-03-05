@@ -1,15 +1,43 @@
-[
-  "Il 90% del debugging è fissare lo schermo con sospetto.",
-  "Se funziona al primo colpo, mi preoccupo.",
-  "Il codice è poesia, ma a volte è anche un rant.",
-  "Aprire una nuova tab per cercare una cosa: fallimento garantito (ne aprirò 12).",
-  "Il mio superpotere? Trasformare un bug in una feature non prevista.",
-  "Il mio motto: “Dovrebbe funzionare” (famosissime ultime parole).",
-  "Il mio editor di testo è il mio diario segreto: lì nascondo tutte le mie idee, progetti e anche i miei errori più epici.",
-  "Il mio processo creativo? Scrivere codice alle 3 di notte, svegliarmi alle 10 e scoprire che ho creato un capolavoro... o un disastro. Ma hey, almeno è stato divertente!",
-  "Il mio approccio al debugging? Un mix di logica, intuizione e un pizzico di magia nera. A volte funziona, a volte no, ma è sempre un'avventura.",
-  "Il mio mantra: “Non è un bug, è una funzionalità nascosta”.",
-  "Il mio rapporto con il codice? È complicato, ma non potrei vivere senza di lui. A volte lo amo, a volte lo odio, ma alla fine è sempre lì per me, pronto a sorprendermi (o a farmi impazzire).",
-  "Il mio obiettivo? Non solo scrivere codice che funziona, ma anche codice che racconta una storia, che trasmette emozioni e che, soprattutto, mi fa ridere (o piangere, a seconda dei giorni).",
-  "Il mio consiglio per i nuovi programmatori? Non prendetevi troppo sul serio, il codice è un gioco, divertitevi e non abbiate paura di sbagliare. E ricordate: se non funziona, è solo un'opportunità per imparare (o per fare un meme)."
-]
+{
+  "programmazione": [
+    "Ogni bug è una lezione travestita.",
+    "Il computer fa esattamente ciò che dici, mai ciò che intendi.",
+    "Un algoritmo elegante è una forma di poesia.",
+    "Dietro ogni astrazione si nasconde un caos ben organizzato.",
+    "Il codice è una conversazione con il tuo io del futuro.",
+    "Se funziona al primo tentativo, qualcosa non torna.",
+    "Scrivere codice è trasformare logica in realtà."
+  ],
+
+  "filosofia": [
+    "Ogni risposta genera nuove domande.",
+    "La curiosità è il vero motore della conoscenza.",
+    "La certezza spesso è solo ignoranza ben difesa.",
+    "Capire qualcosa significa anche capire quanto non sappiamo.",
+    "Le idee più semplici sono spesso le più profonde."
+  ],
+
+  "cosmo": [
+    "Gli atomi del tuo corpo sono nati dentro stelle morte.",
+    "Da qualche parte nell'universo una stella sta esplodendo in questo momento.",
+    "Viviamo su una roccia che orbita attorno a una sfera di fuoco.",
+    "L'universo ha 13,8 miliardi di anni e continua ad espandersi.",
+    "Il cielo notturno è un archivio del passato."
+  ],
+
+  "debug": [
+    "Il bug è sempre dove hai controllato meno.",
+    "Metà del debugging è dimostrare che avevi torto.",
+    "Il compilatore è un insegnante molto severo.",
+    "A volte il problema non è il codice, ma l'idea dietro al codice.",
+    "Stampare variabili è archeologia del software."
+  ],
+
+  "meta": [
+    "Questa pagina è ancora un esperimento.",
+    "Questo non è un CV. È un laboratorio.",
+    "Questo sito è un progetto in evoluzione.",
+    "Ogni riga di codice qui racconta un tentativo.",
+    "La curiosità è il vero motore di questo posto."
+  ]
+}
