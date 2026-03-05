@@ -195,10 +195,18 @@ a:hover{ text-decoration: underline; }
   transform: translateY(0);
 }
 
-.thought.musa {
+.thought.musa{
   border-color: rgba(125,211,252,0.35);
-  box-shadow: 0 0 18px rgba(125,211,252,0.15);
+  box-shadow: 0 0 25px rgba(125,211,252,0.25);
+  background: rgba(125,211,252,0.08);
   color: var(--accent-grad);
+  animation: musaPulse 3s ease-in-out infinite;
+}
+
+@keyframes musaPulse{
+  0%{ box-shadow: 0 0 15px rgba(125,211,252,0.15); }
+  50%{ box-shadow: 0 0 30px rgba(125,211,252,0.35); }
+  100%{ box-shadow: 0 0 15px rgba(125,211,252,0.15); }
 }
 
 .section{
