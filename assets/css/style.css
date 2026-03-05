@@ -198,6 +198,7 @@ a:hover{ text-decoration: underline; }
 .thought.musa {
   border-color: rgba(125,211,252,0.35);
   box-shadow: 0 0 18px rgba(125,211,252,0.15);
+  color: var(--accent-grad);
 }
 
 .section{
