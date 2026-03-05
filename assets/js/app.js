@@ -1,9 +1,14 @@
 "use strict";
 
-// === Stato globale ===
+/* =========================
+   Stato globale
+========================= */
 let thoughtsData = null;
+let lastThoughtKey = null;
 
-// === Helpers ===
+/* =========================
+   Utility
+========================= */
 async function loadJSON(path) {
   const res = await fetch(path, { cache: "no-store" });
   if (!res.ok) throw new Error(`Errore caricamento ${path}: ${res.status}`);
@@ -100,20 +105,9 @@ function buildId() {
   return parts.join("");
 }
 
-// === Thought logic (categorie) ===
-function pickThought() {
-  // thoughtsData deve essere un oggetto: { categoria: [frasi...] }
-  if (!thoughtsData || typeof thoughtsData !== "object") return "";
-
-  const categories = Object.keys(thoughtsData).filter((k) => Array.isArray(thoughtsData[k]) && thoughtsData[k].length > 0);
-  if (categories.length === 0) return "";
-
-  const cat = randomItem(categories);
-  const phrase = randomItem(thoughtsData[cat]);
-
-  return phrase ?? "";
-}
-
+/* =========================
+   Thought UI (animazione)
+========================= */
 function showThought(text) {
   const node = document.getElementById("thought");
   if (!node) return;
@@ -126,20 +120,99 @@ function showThought(text) {
   }, 100);
 }
 
-// === Main ===
+/* =========================
+   Thought engine “elegante”
+   (categorie + pesi + rari)
+========================= */
+
+// Supporta due formati:
+// A) vecchio: { "debug": ["..", ".."], "cosmo": [".."] }
+// B) nuovo:   { "debug": { "weight": 3, "items": [".."], "rareChance": 0.02 }, ... }
+
+function normalizeThoughts(raw) {
+  // Se è un array, lo trasformiamo in una categoria unica
+  if (Array.isArray(raw)) {
+    return { casuale: { weight: 1, items: raw } };
+  }
+
+  // Se è un oggetto
+  const out = {};
+  for (const [cat, value] of Object.entries(raw ?? {})) {
+    if (Array.isArray(value)) {
+      out[cat] = { weight: 1, items: value };
+    } else if (value && typeof value === "object") {
+      const items = Array.isArray(value.items) ? value.items : [];
+      const weight = typeof value.weight === "number" ? value.weight : 1;
+      const rareChance = typeof value.rareChance === "number" ? value.rareChance : null;
+      out[cat] = { weight, items, rareChance };
+    }
+  }
+  return out;
+}
+
+function pickWeightedCategory(thoughtsObj) {
+  const entries = Object.entries(thoughtsObj)
+    .filter(([_, v]) => v && Array.isArray(v.items) && v.items.length);
+
+  if (!entries.length) return null;
+
+  // Prima: categoria “rara” se scatta
+  for (const [cat, v] of entries) {
+    if (typeof v.rareChance === "number" && Math.random() < v.rareChance) {
+      return cat;
+    }
+  }
+
+  // Poi: pesca con pesi
+  const total = entries.reduce((sum, [_, v]) => sum + (v.weight ?? 1), 0);
+  let r = Math.random() * total;
+
+  for (const [cat, v] of entries) {
+    r -= (v.weight ?? 1);
+    if (r <= 0) return cat;
+  }
+
+  return entries[entries.length - 1][0];
+}
+
+function pickThoughtElegant() {
+  if (!thoughtsData || typeof thoughtsData !== "object") return { text: "", category: "" };
+
+  const cat = pickWeightedCategory(thoughtsData);
+  if (!cat) return { text: "", category: "" };
+
+  const items = thoughtsData[cat].items;
+  if (!items?.length) return { text: "", category: cat };
+
+  let idx = Math.floor(Math.random() * items.length);
+  let key = `${cat}|${idx}`;
+
+  // Anti-ripetizione immediata
+  if (items.length > 1 && key === lastThoughtKey) {
+    idx = (idx + 1) % items.length;
+    key = `${cat}|${idx}`;
+  }
+
+  lastThoughtKey = key;
+  return { text: items[idx], category: cat };
+}
+
+/* =========================
+   Main
+========================= */
 (async function main() {
   setSafeText("#year", String(new Date().getFullYear()));
   setSafeText("#buildId", buildId());
 
   try {
-    const [profile, diag, thoughts] = await Promise.all([
+    const [profile, diag, thoughtsRaw] = await Promise.all([
       loadJSON("data/profile.json"),
       loadJSON("data/diagnostics.json"),
       loadJSON("data/thoughts.json"),
     ]);
 
-    // salva thoughts globalmente (così lo usano anche altri pezzi del file)
-    thoughtsData = thoughts;
+    // Normalizza e salva globalmente
+    thoughtsData = normalizeThoughts(thoughtsRaw);
 
     // profile
     setSafeText("#name", profile.name);
@@ -190,11 +263,24 @@ function showThought(text) {
 
     // thoughts button
     const btnTruth = $("#btnTruth");
-    const sayThought = () => showThought(pickThought());
+    const sayThought = () => {
+      const t = pickThoughtElegant();
+      showThought(t.text);
+
+      // Se vuoi mostrare la categoria, crea un elemento #thoughtTag in HTML.
+      const tag = document.getElementById("thoughtTag");
+      if (tag) tag.textContent = t.category ? `#${t.category}` : "";
+    };
 
     if (btnTruth) btnTruth.addEventListener("click", sayThought);
+
     // una frase al primo load
     sayThought();
+
+    // Autoplay “gentile” (commenta se non lo vuoi)
+    // setInterval(() => {
+    //   if (document.visibilityState === "visible") sayThought();
+    // }, 12000);
 
     // meter meme
     const meterBar = $("#meterBar");
@@ -203,7 +289,7 @@ function showThought(text) {
     if (btnMeter && meterBar) {
       btnMeter.addEventListener("click", () => {
         deployed = !deployed;
-        const target = deployed ? 12 : 68;
+        const target = deployed ? 12 : 68; // dopo deploy: panico controllato
         meterBar.style.width = `${target}%`;
         btnMeter.textContent = deployed ? "Rollback (per favore)" : "Simula deploy";
       });
@@ -214,7 +300,9 @@ function showThought(text) {
   }
 })();
 
-// === Typewriter ===
+/* =========================
+   Typewriter
+========================= */
 const text = "booting Rosca.exe...";
 const element = document.getElementById("typeText");
 let i = 0;
@@ -229,7 +317,9 @@ function typeWriter() {
 }
 typeWriter();
 
-// === Easter eggs ===
+/* =========================
+   Easter eggs (tastiera)
+========================= */
 let buffer = "";
 
 document.addEventListener("keydown", (e) => {
@@ -251,10 +341,15 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// === Confidence meter random (se lo usi da qualche parte) ===
-const meter = document.getElementById("meterBar");
+/* =========================
+   Confidence meter random
+========================= */
 function randomConfidence() {
+  const meter = document.getElementById("meterBar");
   if (!meter) return;
   const value = Math.floor(Math.random() * 100);
   meter.style.width = value + "%";
 }
+
+// Se lo chiami da onclick="" deve stare globale:
+window.randomConfidence = randomConfidence;
