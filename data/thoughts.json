@@ -1,43 +1,39 @@
 {
-  "programmazione": [
-    "Ogni bug è una lezione travestita.",
-    "Il computer fa esattamente ciò che dici, mai ciò che intendi.",
-    "Un algoritmo elegante è una forma di poesia.",
-    "Dietro ogni astrazione si nasconde un caos ben organizzato.",
-    "Il codice è una conversazione con il tuo io del futuro.",
-    "Se funziona al primo tentativo, qualcosa non torna.",
-    "Scrivere codice è trasformare logica in realtà."
-  ],
-
-  "filosofia": [
-    "Ogni risposta genera nuove domande.",
-    "La curiosità è il vero motore della conoscenza.",
-    "La certezza spesso è solo ignoranza ben difesa.",
-    "Capire qualcosa significa anche capire quanto non sappiamo.",
-    "Le idee più semplici sono spesso le più profonde."
-  ],
-
-  "cosmo": [
-    "Gli atomi del tuo corpo sono nati dentro stelle morte.",
-    "Da qualche parte nell'universo una stella sta esplodendo in questo momento.",
-    "Viviamo su una roccia che orbita attorno a una sfera di fuoco.",
-    "L'universo ha 13,8 miliardi di anni e continua ad espandersi.",
-    "Il cielo notturno è un archivio del passato."
-  ],
-
-  "debug": [
-    "Il bug è sempre dove hai controllato meno.",
-    "Metà del debugging è dimostrare che avevi torto.",
-    "Il compilatore è un insegnante molto severo.",
-    "A volte il problema non è il codice, ma l'idea dietro al codice.",
-    "Stampare variabili è archeologia del software."
-  ],
-
-  "meta": [
-    "Questa pagina è ancora un esperimento.",
-    "Questo non è un CV. È un laboratorio.",
-    "Questo sito è un progetto in evoluzione.",
-    "Ogni riga di codice qui racconta un tentativo.",
-    "La curiosità è il vero motore di questo posto."
-  ]
+  "programmazione": {
+    "weight": 5,
+    "items": [
+      "Il computer fa esattamente ciò che gli dici. Questo è sia meraviglioso che terrificante.",
+      "Un algoritmo pulito è una scusa per dormire meglio.",
+      "Dietro ogni astrazione c'è un drago."
+    ]
+  },
+  "debug": {
+    "weight": 4,
+    "items": [
+      "Il bug è sempre dove hai guardato meno.",
+      "Metà del debugging è dimostrare che avevi torto."
+    ]
+  },
+  "filosofia": {
+    "weight": 2,
+    "items": [
+      "Ogni risposta genera nuove domande.",
+      "La certezza spesso è ignoranza in armatura."
+    ]
+  },
+  "cosmo": {
+    "weight": 1,
+    "items": [
+      "Stiamo su una roccia che gira attorno a una sfera di fuoco.",
+      "Il cielo è un archivio del passato."
+    ]
+  },
+  "rari": {
+    "weight": 1,
+    "rareChance": 0.03,
+    "items": [
+      "Hai trovato un pensiero raro. Complimenti: ora puoi vantartene con nessuno.",
+      "Plot twist: anche tu sei un esperimento."
+    ]
+  }
 }
