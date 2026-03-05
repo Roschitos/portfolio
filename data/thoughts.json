@@ -116,8 +116,8 @@
       "La realtà è un beta test permanente.",
       "Se stai cercando senso… buona fortuna. Ma almeno qui ci proviamo."
     ]
-  }
-
+  },
+  
   "musa": {
   "weight": 1,
   "rareChance": 0.02,
@@ -132,6 +132,6 @@
     "A volte una musa non parla. Ma cambia il modo in cui guardi il mondo.",
     "L’ispirazione è una strana forma di presenza.",
     "Se un’idea ti torna sempre in mente, forse non è solo un’idea."
-  ]
-}
+    ]
+  }
 }
