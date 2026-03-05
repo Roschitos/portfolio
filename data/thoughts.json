@@ -1,39 +1,137 @@
 {
   "programmazione": {
-    "weight": 5,
+    "weight": 6,
     "items": [
       "Il computer fa esattamente ciò che gli dici. Questo è sia meraviglioso che terrificante.",
-      "Un algoritmo pulito è una scusa per dormire meglio.",
-      "Dietro ogni astrazione c'è un drago."
+      "Ogni riga di codice è una promessa al futuro. A volte una minaccia.",
+      "Scrivere codice è tradurre idee in errori riproducibili.",
+      "Il codice pulito non è perfezione: è gentilezza verso te stesso.",
+      "Se una cosa è semplice, rendila chiara. Se è complessa, rendila leggibile.",
+      "Un buon nome di variabile risparmia più tempo di mille commenti.",
+      "La prima versione funziona. La seconda capisci perché.",
+      "Le scorciatoie in codice sono debiti con interessi composti.",
+      "Se non riesci a spiegarlo, non l’hai ancora capito davvero.",
+      "Le astrazioni sono comode finché non ti chiedono il conto.",
+      "Il miglior bug è quello che non hai mai scritto.",
+      "Se la soluzione sembra magia, probabilmente è fragile.",
+      "Il refactor è terapia: non risolve tutto, ma aiuta.",
+      "Gli edge case sono il modo in cui la realtà ride dei nostri schemi.",
+      "Ogni progetto è un compromesso tra tempo, energia e sanità mentale.",
+      "A volte l’ottimizzazione migliore è cancellare codice.",
+      "Un programma è una storia: input, conflitto, output.",
+      "Quando ti perdi nel codice, torna al problema.",
+      "Il codice che funziona non è sempre il codice giusto.",
+      "La complessità è una bestia: nutrila poco."
     ]
   },
+
   "debug": {
-    "weight": 4,
+    "weight": 5,
     "items": [
       "Il bug è sempre dove hai guardato meno.",
-      "Metà del debugging è dimostrare che avevi torto."
+      "Metà del debugging è dimostrare che avevi torto.",
+      "Se funziona al primo tentativo, controlla comunque.",
+      "Il console.log è archeologia del software: scavi finché non trovi ossa.",
+      "Il compilatore è severo ma onesto. Gli esseri umani no.",
+      "Il problema non è il codice: è l’assunzione dietro il codice.",
+      "I bug difficili amano nascondersi dietro la parola 'semplice'.",
+      "Ogni errore è un indizio. Anche quelli offensivi.",
+      "Quando non sai più che fare: riduci, isola, ripeti.",
+      "Il bug che sparisce quando lo guardi è un bug quantistico.",
+      "Se l’errore è intermittente, la pazienza non lo è.",
+      "Un test che fallisce è un messaggio dal futuro: 'te l’avevo detto'.",
+      "Non fidarti mai di un sistema che 'di solito' funziona.",
+      "Il debug migliore è quello che finisce con 'ah, ovvio'.",
+      "Il browser ti mente solo quanto tu gli permetti.",
+      "La cache è il modo in cui il web ti insegna l’umiltà.",
+      "Se cambi una cosa e si rompono tre cose, hai trovato una dipendenza nascosta.",
+      "Il fix veloce è spesso un bug lento.",
+      "Il crash è solo una forma intensa di feedback.",
+      "Quando ti arrabbi col codice, ricordati: sei tu che l’hai scritto."
     ]
   },
+
   "filosofia": {
     "weight": 2,
     "items": [
+      "La curiosità è il vero motore della conoscenza.",
       "Ogni risposta genera nuove domande.",
-      "La certezza spesso è ignoranza in armatura."
+      "La certezza spesso è ignoranza in armatura.",
+      "Capire qualcosa significa anche capire quanto non sappiamo.",
+      "La verità non è sempre comoda, ma è sempre utile.",
+      "Il mondo non è obbligato ad avere senso. Noi sì.",
+      "Il dubbio è un superpotere sottovalutato.",
+      "Le idee migliori resistono alle domande cattive.",
+      "Le scorciatoie mentali funzionano… finché non falliscono.",
+      "La disciplina batte la motivazione, quasi sempre.",
+      "Cambiare idea non è debolezza: è aggiornamento software.",
+      "La realtà è complessa: semplificarla è necessario, falsificarla è facile.",
+      "Il tempo è la risorsa più cara: spendilo con intenzione.",
+      "Se una cosa ti ossessiona, trasformala in progetto.",
+      "Non serve avere ragione: serve avvicinarsi al vero."
     ]
   },
+
   "cosmo": {
     "weight": 1,
     "items": [
-      "Stiamo su una roccia che gira attorno a una sfera di fuoco.",
-      "Il cielo è un archivio del passato."
+      "Viviamo su una roccia che orbita attorno a una sfera di fuoco.",
+      "Gli atomi nel tuo corpo sono stati forgiati dentro stelle antiche.",
+      "Guardare il cielo è leggere il passato con una luce in ritardo.",
+      "L’universo è enorme e noi siamo… sorprendentemente qui.",
+      "Ogni notte è un promemoria: la realtà è più grande dei nostri problemi.",
+      "Da qualche parte una stella sta esplodendo proprio adesso.",
+      "La gravità è il bug più antico: nessuno l’ha mai patchato.",
+      "Il cosmo non ha intenzioni, ma noi sì: e questa è la magia.",
+      "La distanza tra le stelle è un silenzio pieno di possibilità.",
+      "Siamo polvere di stelle con ansia e password dimenticate."
     ]
   },
+
+  "meta": {
+    "weight": 2,
+    "items": [
+      "Questo non è un CV. È un laboratorio.",
+      "Questa pagina è un esperimento in evoluzione.",
+      "Qui non vendo un'immagine: mostro un processo.",
+      "Se stai leggendo questo, il progetto sta facendo il suo lavoro.",
+      "La forma cambia. L’onestà resta.",
+      "Ogni sezione è una prova: se funziona, la tengo. Se no, la riscrivo.",
+      "La differenza tra 'portfolio' e 'laboratorio' è che qui si vede anche la polvere.",
+      "Non c’è marketing: solo tentativi, errori e upgrade.",
+      "Il bello di un progetto personale è che può essere strano.",
+      "Questa pagina non è finita. Per fortuna."
+    ]
+  },
+
   "rari": {
     "weight": 1,
     "rareChance": 0.03,
     "items": [
       "Hai trovato un pensiero raro. Complimenti: ora puoi vantartene con nessuno.",
-      "Plot twist: anche tu sei un esperimento."
+      "Plot twist: anche tu sei un esperimento.",
+      "Sei entrato nella stanza segreta del sito. Non c’è niente, ma suona importante.",
+      "Modalità 'musa': attiva. (Non chiedermi perché.)",
+      "Questo messaggio appare di rado. Come la stabilità dopo un deploy.",
+      "La realtà è un beta test permanente.",
+      "Se stai cercando senso… buona fortuna. Ma almeno qui ci proviamo."
     ]
   }
+
+  "musa": {
+  "weight": 1,
+  "rareChance": 0.02,
+  "items": [
+    "Ogni tanto appare una musa. Non spiega nulla, ma accende tutto.",
+    "Alcune idee arrivano come tempeste. Altre arrivano con il tuo nome.",
+    "Non tutte le ispirazioni fanno rumore.",
+    "Certe persone non entrano nella tua vita: entrano nel tuo codice sorgente.",
+    "Alcune presenze cambiano la gravità delle tue giornate.",
+    "L’ispirazione non si cerca. Si riconosce.",
+    "Ci sono pensieri che non esisterebbero senza una certa persona.",
+    "A volte una musa non parla. Ma cambia il modo in cui guardi il mondo.",
+    "L’ispirazione è una strana forma di presenza.",
+    "Se un’idea ti torna sempre in mente, forse non è solo un’idea."
+  ]
+}
 }
