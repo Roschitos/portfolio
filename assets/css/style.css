@@ -175,6 +175,7 @@ a:hover{ text-decoration: underline; }
   flex-wrap: wrap;
   align-items:center;
 }
+
 .thought{
   margin: 1rem 0 0;
   padding: .9rem 1rem;
@@ -183,6 +184,15 @@ a:hover{ text-decoration: underline; }
   border: 1px solid var(--line);
   color: var(--text);
   min-height: 2.6rem;
+
+  /* FIX: animazione showThought() */
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .35s ease, transform .35s ease;
+}
+.thought.show{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .section{
@@ -296,9 +306,6 @@ a:hover{ text-decoration: underline; }
   cursor:pointer;
   font-weight: 750;
 
-  background:
-    linear-gradient(rgba(11,15,20,.10), rgba(11,15,20,.10)) padding-box,
-    var(--accent-grad) border-box;
   background-image: var(--accent-grad);
   background-size: var(--accent-grad-size);
   animation: accentShift 6s ease-in-out infinite;
@@ -445,6 +452,12 @@ a:hover{ text-decoration: underline; }
   .btn,
   .meter-bar{
     animation: none !important;
+  }
+
+  .thought{
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
   }
 }
 
