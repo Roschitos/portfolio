@@ -196,17 +196,45 @@ a:hover{ text-decoration: underline; }
 }
 
 .thought.musa{
-  border-color: rgba(125,211,252,0.35);
-  box-shadow: 0 0 25px rgba(125,211,252,0.25);
-  background: rgba(125,211,252,0.08);
-  color: var(--accent-grad);
-  animation: musaPulse 3s ease-in-out infinite;
+  border-color: rgba(255, 80, 120, 0.45);
+
+  background: radial-gradient(
+    circle at center,
+    rgba(255,120,150,0.20),
+    rgba(255,60,90,0.12),
+    rgba(20,10,15,0.6)
+  );
+
+  box-shadow:
+    0 0 12px rgba(255,80,120,0.25),
+    0 0 30px rgba(255,80,120,0.15);
+
+  animation: heartPulse 2.8s ease-in-out infinite;
 }
 
-@keyframes musaPulse{
-  0%{ box-shadow: 0 0 15px rgba(125,211,252,0.15); }
-  50%{ box-shadow: 0 0 30px rgba(125,211,252,0.35); }
-  100%{ box-shadow: 0 0 15px rgba(125,211,252,0.15); }
+@keyframes heartPulse{
+
+  0%{
+    transform: scale(1);
+    box-shadow:
+      0 0 10px rgba(255,80,120,0.20),
+      0 0 20px rgba(255,80,120,0.10);
+  }
+
+  50%{
+    transform: scale(1.015);
+    box-shadow:
+      0 0 22px rgba(255,90,130,0.45),
+      0 0 45px rgba(255,70,110,0.25);
+  }
+
+  100%{
+    transform: scale(1);
+    box-shadow:
+      0 0 10px rgba(255,80,120,0.20),
+      0 0 20px rgba(255,80,120,0.10);
+  }
+
 }
 
 .section{
