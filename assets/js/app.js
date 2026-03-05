@@ -264,13 +264,22 @@ function pickThoughtElegant() {
     // thoughts button
     const btnTruth = $("#btnTruth");
     const sayThought = () => {
-      const t = pickThoughtElegant();
-      showThought(t.text);
+       const t = pickThoughtElegant();
+       showThought(t.text);
 
-      // Se vuoi mostrare la categoria, crea un elemento #thoughtTag in HTML.
-      const tag = document.getElementById("thoughtTag");
-      if (tag) tag.textContent = t.category ? `#${t.category}` : "";
-    };
+     const thoughtBox = document.getElementById("thought");
+
+     // rimuove eventuale classe musa precedente
+     thoughtBox.classList.remove("musa");
+
+     // se la categoria è musa aggiunge la classe
+     if (t.category === "musa") {
+       thoughtBox.classList.add("musa");
+     }
+
+     const tag = document.getElementById("thoughtTag");
+     if (tag) tag.textContent = t.category ? `#${t.category}` : "";
+   };
 
     if (btnTruth) btnTruth.addEventListener("click", sayThought);
 
@@ -278,9 +287,9 @@ function pickThoughtElegant() {
     sayThought();
 
     // Autoplay “gentile” (commenta se non lo vuoi)
-    // setInterval(() => {
-    //   if (document.visibilityState === "visible") sayThought();
-    // }, 12000);
+    setInterval(() => {
+      if (document.visibilityState === "visible") sayThought();
+    }, 12000);
 
     // meter meme
     const meterBar = $("#meterBar");
