@@ -240,3 +240,9 @@ function randomConfidence(){
   const value = Math.floor(Math.random()*100);
   meter.style.width = value + "%";
 }
+
+const categories = Object.keys(thoughts)
+const randomCategory = categories[Math.floor(Math.random() * categories.length)]
+
+const categoryThoughts = thoughts[randomCategory]
+const randomThought = categoryThoughts[Math.floor(Math.random() * categoryThoughts.length)]
