@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rosca — Myself & I</title>
-  <meta name="description" content="Portfolio personale: si sono un pesce e lo so." />
+  <meta name="description" content="Portfolio personale: sì, sono un pesce e lo so." />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Salta al contenuto</a>
 
   <header class="site-header">
@@ -23,6 +23,7 @@
 
       <nav class="nav">
         <a href="#about">Chi sono</a>
+        <a href="#philosophy">Philosophy</a>
         <a href="#diagnostics">Diagnostica</a>
         <a href="#contact">Contatti</a>
       </nav>
@@ -37,8 +38,9 @@
             Questo non è un CV.
             <span class="hero-accent">È il mio io, è come sono fatto, e se non ti piace, beh, non è colpa mia.</span>
           </h1>
+
           <p class="hero-lead" id="heroLead">
-            Qui trovi prove, progetti e un po’ di autoironia. Perché la verità è meglio del marketing.
+            Qui trovi chi sono e cosa mi caratterizza. Perché la verità è meglio del nascondersi dietro una maschera.
           </p>
 
           <div class="hero-actions">
@@ -46,22 +48,24 @@
           </div>
 
           <p class="thought" id="thought" aria-live="polite"></p>
+          <div class="thought-tag muted small" id="thoughtTag"></div>
         </div>
 
         <div class="hero-right">
           <div class="card terminal">
             <div class="terminal-top">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
               <span class="terminal-title">roscaOS — boot log</span>
             </div>
+
             <pre class="terminal-body" id="bootLog">
 > booting Rosca.exe
 > curiosity module: loading...
 > sleep module: unstable
 > reality check: enabled
-<h4 id="typeText"></h4>
-            </pre>
-            
+<span id="typeText"></span></pre>
           </div>
         </div>
       </div>
@@ -71,10 +75,10 @@
       <div class="container">
         <div class="section-head">
           <h2>Chi sono</h2>
-          <p class="muted" id="aboutSubtitle">Una descrizione breve, vera, più o meno.</p>
+          <p class="muted" id="aboutSubtitle">Una descrizione breve, vera, e a modo mio.</p>
         </div>
 
-        <div class="grid two">
+        <div class="grid three">
           <div class="card">
             <h3>In poche righe</h3>
             <div id="aboutText" class="prose">
@@ -88,6 +92,28 @@
               <li>Sto caricando i dati…</li>
             </ul>
           </div>
+
+          <div class="card">
+            <h3>Sogni</h3>
+            <ul class="list" id="dreamsList">
+              <li>Sto caricando i dati…</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="philosophy">
+      <div class="container">
+        <div class="section-head">
+          <h2>Philosophy</h2>
+          <p class="muted" id="philosophySubtitle">Il modo in cui guardo il mondo, o almeno ci provo.</p>
+        </div>
+
+        <div class="card">
+          <div id="philosophyText" class="prose">
+            <p>Carico contenuti da JSON…</p>
+          </div>
         </div>
       </div>
     </section>
@@ -96,7 +122,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Diagnostica personale</h2>
-          <p class="muted">Abilità e… “disabilità” (per ridere, ma anche per essere onesti).</p>
+          <p class="muted">Abilità e “disabilità” per ridere, ma anche per essere onesti.</p>
         </div>
 
         <div class="grid two">
@@ -117,11 +143,13 @@
               <div class="meter-title">Confidenza nel codice</div>
               <div class="muted small">prima del deploy / dopo il deploy</div>
             </div>
+
             <div class="meter">
               <div class="meter-bar" id="meterBar" style="width: 69%"></div>
             </div>
+
             <button class="btn tiny ghost" id="btnMeter" type="button">Simula deploy</button>
-            <button class="btn tiny ghost" onclick="randomConfidence()">Test confidence</button>
+            <button class="btn tiny ghost" type="button" onclick="randomConfidence()">Test confidence</button>
           </div>
         </div>
       </div>
@@ -131,7 +159,7 @@
       <div class="container">
         <div class="section-head">
           <h2>Contatti</h2>
-          <p class="muted">Link veri, niente misteri.</p>
+          <p class="muted">Link veri, niente fumo cosmico.</p>
         </div>
 
         <div class="card">
