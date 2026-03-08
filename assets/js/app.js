@@ -129,9 +129,7 @@ function showThought(text) {
 /* =========================
    Thought engine
 ========================= */
-
 function normalizeThoughts(raw) {
-
   if (Array.isArray(raw)) {
     return { casuale: { weight: 1, items: raw } }
   }
@@ -139,12 +137,9 @@ function normalizeThoughts(raw) {
   const out = {}
 
   for (const [cat, value] of Object.entries(raw ?? {})) {
-
     if (Array.isArray(value)) {
       out[cat] = { weight: 1, items: value }
-
     } else if (value && typeof value === "object") {
-
       const items = Array.isArray(value.items) ? value.items : []
       const weight = typeof value.weight === "number" ? value.weight : 1
       const rareChance = typeof value.rareChance === "number" ? value.rareChance : null
@@ -157,7 +152,6 @@ function normalizeThoughts(raw) {
 }
 
 function pickWeightedCategory(thoughtsObj) {
-
   const entries = Object.entries(thoughtsObj)
     .filter(([_, v]) => v && Array.isArray(v.items) && v.items.length)
 
@@ -181,9 +175,9 @@ function pickWeightedCategory(thoughtsObj) {
 }
 
 function pickThoughtElegant() {
-
-  if (!thoughtsData || typeof thoughtsData !== "object")
+  if (!thoughtsData || typeof thoughtsData !== "object") {
     return { text: "", category: "" }
+  }
 
   const cat = pickWeightedCategory(thoughtsData)
   if (!cat) return { text: "", category: "" }
@@ -207,13 +201,11 @@ function pickThoughtElegant() {
 /* =========================
    Main
 ========================= */
-(async function main() {
-
+;(async function main() {
   setSafeText("#year", String(new Date().getFullYear()))
   setSafeText("#buildId", buildId())
 
   try {
-
     const [profile, diag, thoughtsRaw] = await Promise.all([
       loadJSON("data/profile.json"),
       loadJSON("data/diagnostics.json"),
@@ -226,14 +218,16 @@ function pickThoughtElegant() {
     setSafeText("#tagline", profile.tagline)
     setSafeText("#heroLead", profile.heroLead ?? $("#heroLead")?.textContent)
     setSafeText("#aboutSubtitle", profile.aboutSubtitle ?? $("#aboutSubtitle")?.textContent)
+    setSafeText("#philosophySubtitle", profile.philosophySubtitle ?? $("#philosophySubtitle")?.textContent)
 
     renderParagraphs($("#aboutText"), profile.about ?? [])
     renderList($("#nowList"), profile.now ?? [])
+    renderList($("#dreamsList"), profile.dreams ?? [])
+    renderParagraphs($("#philosophyText"), profile.philosophy ?? [])
 
     const contact = $("#contactLinks")
 
     if (contact) {
-
       contact.innerHTML = ""
 
       if (profile.links?.github) {
@@ -275,11 +269,11 @@ function pickThoughtElegant() {
     const btnTruth = $("#btnTruth")
 
     const sayThought = () => {
-
       const t = pickThoughtElegant()
       showThought(t.text)
 
       const thoughtBox = document.getElementById("thought")
+      if (!thoughtBox) return
 
       thoughtBox.classList.remove("musa")
 
@@ -301,9 +295,7 @@ function pickThoughtElegant() {
     let deployed = false
 
     if (btnMeter && meterBar) {
-
       btnMeter.addEventListener("click", () => {
-
         deployed = !deployed
         const target = deployed ? 12 : 68
 
@@ -314,33 +306,26 @@ function pickThoughtElegant() {
           : "Simula deploy"
       })
     }
-
   } catch (err) {
-
     console.error(err)
-    showThought("Errore caricamento dati. (Plot twist: anche questo è coerente con la realtà.)")
+    showThought("Errore caricamento dati. Plot twist: anche questo è coerente con la realtà.")
   }
-
 })()
 
 /* =========================
    Typewriter
 ========================= */
-
 const text = "booting Rosca.exe..."
 const element = document.getElementById("typeText")
 
 let i = 0
 
 function typeWriter() {
-
   if (!element) return
 
   if (i < text.length) {
-
     element.textContent += text.charAt(i)
     i++
-
     setTimeout(typeWriter, 60)
   }
 }
@@ -350,48 +335,38 @@ typeWriter()
 /* =========================
    Easter eggs
 ========================= */
-
 let buffer = ""
 
 document.addEventListener("keydown", e => {
-
-  buffer += e.key
+  buffer += e.key.toLowerCase()
   buffer = buffer.slice(-5)
 
   if (buffer === "debug") {
     showThought("Developer mode unlocked")
     buffer = ""
-
   } else if (buffer === "rosca") {
     showThought("Agnese è la mia musa ispiratrice di questo progetto.")
     buffer = ""
-
   } else if (buffer === "amore") {
     showThought("Tra miliardi di persone, il mio caos ha scelto te.")
     buffer = ""
-
   } else if (buffer === "alice") {
     showThought("Alice, top 5 carrier, top 5 pesci")
     buffer = ""
-
   } else if (buffer === "ciola") {
     showThought("Viola il colore della ciola")
     buffer = ""
   }
-
 })
 
 /* =========================
    Confidence meter
 ========================= */
-
 function randomConfidence() {
-
   const meter = document.getElementById("meterBar")
   if (!meter) return
 
   const value = Math.floor(Math.random() * 100)
-
   meter.style.width = value + "%"
 }
 
