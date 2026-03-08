@@ -367,7 +367,7 @@ document.addEventListener("keydown", e => {
     buffer = ""
 
   } else if (buffer === "amore") {
-    showThought("Mi piace pensare che dietro ogni riga di codice ci sia un po' di amore... o almeno un po' di passione per la tecnologia.")
+    showThought("Tra miliardi di persone, il mio caos ha scelto te.")
     buffer = ""
 
   } else if (buffer === "alice") {
