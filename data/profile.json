@@ -1,28 +1,36 @@
 {
   "name": "Rosca",
-  "tagline": "Rosca Anatolie Francesco. Pippa nel esprimere se stesso.",
-  "heroLead": "Qui trovi chi sono e cosa mi caratterizza. Perché la verità è meglio del nasconderi dietro una maschera.",
+  "tagline": "Rosca Anatolie Francesco. Pippa nell'esprimere se stesso.",
+  "heroLead": "Qui trovi chi sono e cosa mi caratterizza. Perché la verità è meglio del nascondersi dietro una maschera.",
   "aboutSubtitle": "Una descrizione breve, vera, e a modo mio.",
+  "philosophySubtitle": "Il mio modo di pensare, tra sincerità, caos e un po’ di autoironia.",
   "about": [
     "Mi piace capire come funzionano le cose.",
-    "Costruisco progetti per imparare, non smetterò mai.",
-    "Sono serio quando serve… (più unico che raro) e stupido resto del tempo.",
-    "Comprensione 100%, elaborazione 0%",
-    "Tendo a fare molti errori, chiedo perdono"
+    "Costruisco progetti per imparare, e non voglio smettere.",
+    "Sono serio quando serve, che è più raro di quanto dovrebbe.",
+    "Comprensione 100%, elaborazione 0%.",
+    "Tendo a fare molti errori, quindi chiedo perdono in anticipo."
   ],
   "now": [
-    "Ammaliato dalla mia Musa",
+    "Ammaliato dalla mia Musa.",
     "Bagnino di salvataggio.",
     "Pizzaiolo.",
     "Sportivo.",
-    "Studente"
+    "Studente."
   ],
   "dreams": [
-    "Una vita tranquilla con una bella famiglia",
-    "Vivere dando il 100% in tutto",
-    "Superare la propria paura sulle donne",
-    "si",
-    "debug"
+    "Una vita tranquilla con una bella famiglia.",
+    "Vivere dando il 100% in tutto.",
+    "Superare la paura nelle relazioni.",
+    "Diventare una versione più solida di me stesso.",
+    "Costruire qualcosa che lasci il segno."
+  ],
+  "philosophy": [
+    "Preferisco una verità scomoda a una bella finzione.",
+    "Essere autentici conta più che sembrare perfetti.",
+    "L'ironia è uno dei modi migliori per sopravvivere al caos.",
+    "Capire davvero qualcosa vale più che ripeterla bene.",
+    "Anche gli errori servono, purché insegnino qualcosa."
   ],
   "links": {
     "github": "https://github.com/Roschitos",
