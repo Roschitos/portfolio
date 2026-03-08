@@ -1,6 +1,6 @@
 {
   "programmazione": {
-    "weight": 6,
+    "weight": 8,
     "items": [
       "Il computer fa esattamente ciò che gli dici. Questo è sia meraviglioso che terrificante.",
       "Ogni riga di codice è una promessa al futuro. A volte una minaccia.",
@@ -21,12 +21,17 @@
       "Un programma è una storia: input, conflitto, output.",
       "Quando ti perdi nel codice, torna al problema.",
       "Il codice che funziona non è sempre il codice giusto.",
-      "La complessità è una bestia: nutrila poco."
+      "La complessità è una bestia: nutrila poco.",
+      "Il codice scritto di fretta è una lettera minatoria al te di domani.",
+      "Ogni funzione troppo lunga è una confessione di colpa.",
+      "Le dipendenze sono utili finché non iniziano a governare il progetto.",
+      "Programmare è costruire ponti su burroni che hai scavato tu.",
+      "La leggibilità è una forma di rispetto."
     ]
   },
 
   "debug": {
-    "weight": 5,
+    "weight": 7,
     "items": [
       "Il bug è sempre dove hai guardato meno.",
       "Metà del debugging è dimostrare che avevi torto.",
@@ -47,12 +52,16 @@
       "Se cambi una cosa e si rompono tre cose, hai trovato una dipendenza nascosta.",
       "Il fix veloce è spesso un bug lento.",
       "Il crash è solo una forma intensa di feedback.",
-      "Quando ti arrabbi col codice, ricordati: sei tu che l’hai scritto."
+      "Quando ti arrabbi col codice, ricordati: sei tu che l’hai scritto.",
+      "I bug peggiori sembrano impossibili finché non li hai causati.",
+      "Ogni errore stupido ha richiesto una creatività speciale.",
+      "La differenza tra panico e metodo è una buona riproduzione del problema.",
+      "Il bug non è personale. Anche se sembra odiarti."
     ]
   },
 
   "filosofia": {
-    "weight": 2,
+    "weight": 4,
     "items": [
       "La curiosità è il vero motore della conoscenza.",
       "Ogni risposta genera nuove domande.",
@@ -68,12 +77,17 @@
       "La realtà è complessa: semplificarla è necessario, falsificarla è facile.",
       "Il tempo è la risorsa più cara: spendilo con intenzione.",
       "Se una cosa ti ossessiona, trasformala in progetto.",
-      "Non serve avere ragione: serve avvicinarsi al vero."
+      "Non serve avere ragione: serve avvicinarsi al vero.",
+      "Pensare bene è più raro che parlare molto.",
+      "L’onestà intellettuale è una forma di coraggio.",
+      "Le convinzioni migliori sono quelle che sopravvivono al dubbio.",
+      "Ogni idea comoda merita almeno una domanda scomoda.",
+      "Capire il limite di una cosa è già un modo per capirla meglio."
     ]
   },
 
   "cosmo": {
-    "weight": 1,
+    "weight": 3,
     "items": [
       "Viviamo su una roccia che orbita attorno a una sfera di fuoco.",
       "Gli atomi nel tuo corpo sono stati forgiati dentro stelle antiche.",
@@ -84,12 +98,17 @@
       "La gravità è il bug più antico: nessuno l’ha mai patchato.",
       "Il cosmo non ha intenzioni, ma noi sì: e questa è la magia.",
       "La distanza tra le stelle è un silenzio pieno di possibilità.",
-      "Siamo polvere di stelle con ansia e password dimenticate."
+      "Siamo polvere di stelle con ansia e password dimenticate.",
+      "Il cielo notturno è il modo più elegante che ha la realtà per umiliarci.",
+      "Ogni costellazione è un tentativo umano di mettere ordine nel caos.",
+      "Il cosmo è indifferente, eppure riesce a essere meraviglioso.",
+      "Le stelle non rispondono, ma fanno venire ottime domande.",
+      "Nell’universo c’è abbastanza spazio per sentirsi piccoli e liberi allo stesso tempo."
     ]
   },
 
   "meta": {
-    "weight": 2,
+    "weight": 4,
     "items": [
       "Questo non è un CV. È un laboratorio.",
       "Questa pagina è un esperimento in evoluzione.",
@@ -100,38 +119,46 @@
       "La differenza tra 'portfolio' e 'laboratorio' è che qui si vede anche la polvere.",
       "Non c’è marketing: solo tentativi, errori e upgrade.",
       "Il bello di un progetto personale è che può essere strano.",
-      "Questa pagina non è finita. Per fortuna."
+      "Questa pagina non è finita. Per fortuna.",
+      "Un sito personale dovrebbe sembrare vivo, non approvato da un comitato.",
+      "Qui dentro c’è più processo che posa.",
+      "Mostrare i difetti è un modo elegante per non mentire.",
+      "Questo progetto cambia insieme a chi lo costruisce.",
+      "La versione finale è un mito comodo."
     ]
   },
 
   "rari": {
-    "weight": 1,
-    "rareChance": 0.03,
+    "weight": 0.7,
+    "rareChance": 0.02,
     "items": [
       "Hai trovato un pensiero raro. Complimenti: ora puoi vantartene con nessuno.",
       "Plot twist: anche tu sei un esperimento.",
       "Sei entrato nella stanza segreta del sito. Non c’è niente, ma suona importante.",
-      "Modalità 'musa': attiva. (Non chiedermi perché.)",
+      "Modalità strana: attiva. Nessuno sa bene cosa significhi.",
       "Questo messaggio appare di rado. Come la stabilità dopo un deploy.",
       "La realtà è un beta test permanente.",
-      "Se stai cercando senso… buona fortuna. Ma almeno qui ci proviamo."
+      "Se stai cercando senso… buona fortuna. Ma almeno qui ci proviamo.",
+      "Hai pescato una probabilità bassa. Statisticamente sexy.",
+      "Ci sono cose rare che contano molto. E poi ci sono questi messaggi.",
+      "Alcune anomalie non vanno corrette. Vanno osservate."
     ]
   },
-  
+
   "musa": {
-  "weight": 1,
-  "rareChance": 0.02,
-  "items": [
-    "Ogni tanto appare una musa. Non spiega nulla, ma accende tutto.",
-    "Alcune idee arrivano come tempeste. Altre arrivano con il tuo nome.",
-    "Non tutte le ispirazioni fanno rumore.",
-    "Certe persone non entrano nella tua vita: entrano nel tuo codice sorgente.",
-    "Alcune presenze cambiano la gravità delle tue giornate.",
-    "L’ispirazione non si cerca. Si riconosce.",
-    "Ci sono pensieri che non esisterebbero senza una certa persona.",
-    "A volte una musa non parla. Ma cambia il modo in cui guardi il mondo.",
-    "L’ispirazione è una strana forma di presenza.",
-    "Se un’idea ti torna sempre in mente, forse non è solo un’idea."
+    "weight": 0.2,
+    "rareChance": 0.005,
+    "items": [
+      "Ogni tanto appare una musa. Non spiega nulla, ma accende tutto.",
+      "Alcune idee arrivano come tempeste. Altre arrivano con il tuo nome.",
+      "Non tutte le ispirazioni fanno rumore.",
+      "Certe persone non entrano nella tua vita: entrano nel tuo codice sorgente.",
+      "Alcune presenze cambiano la gravità delle tue giornate.",
+      "L’ispirazione non si cerca. Si riconosce.",
+      "Ci sono pensieri che non esisterebbero senza una certa persona.",
+      "A volte una musa non parla. Ma cambia il modo in cui guardi il mondo.",
+      "L’ispirazione è una strana forma di presenza.",
+      "Se un’idea ti torna sempre in mente, forse non è solo un’idea."
     ]
   }
 }
