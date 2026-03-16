@@ -219,8 +219,16 @@ a:hover{
 }
 
 .hero-accent{
-  background-image: var(--accent-grad);
-  background-size: var(--accent-grad-size);
+  background-image: linear-gradient(
+    67deg,
+    #ffd6e7,
+    #ffc2d9,
+    #f8c8ff,
+    #d9c2ff,
+    #c9e7ff,
+    #b8f2ff
+  );
+  background-size: 260% 260%;
   animation: accentShift 7s ease-in-out infinite;
   -webkit-background-clip: text;
   background-clip: text;
