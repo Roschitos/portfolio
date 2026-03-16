@@ -9,13 +9,14 @@
   --accent: #7dd3fc;
 
   --accent-grad: linear-gradient(
-    67deg,
-    #49abd9,
-    #a518dd,
-    #ff004c,
-    #a6d334,
-    #7dd3fc
-  );
+  67deg,
+  #ffb7d5,
+  #ffc8dd,
+  #e0bbff,
+  #cdb4ff,
+  #bde0fe,
+  #a2d2ff
+);
   --accent-grad-size: 260% 260%;
 
   --danger: #fb7185;
